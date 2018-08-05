@@ -1,0 +1,69 @@
+DBMS :
+
+1) what is dbms 
+DBMS is a program that controls maintain and use of a database .
+Dbms can be termed as file manager that manage data in database rether than saving it in files .
+
+2) What is RDBMS 
+RDBMS stands for relational database management system . RDBMS store the data into the
+collection of tables which is related by common field between the column of the table . 
+It also provide relational operators to manipulate the data stored into the tables .
+Ex. SQL server
+
+3)SQL structure query language : 
+It's  used to communicate with the Database . This is a standard 
+language used to perform tasks such as update , insert , deletion of data from a database .
+standard SQL command is select .
+sql is dml & ddl .
+
+4) What is a database : 
+Nothing but organise form of data for easy access , storing , retrieval , managing of data .
+Ex . school management database , bank management database 
+
+5) Tables & Fields : 
+
+A table is set of data that are organised in a model with columns & Rows .
+Colums can be organised As vertical & Rows are horizontal . A table has specified number of columns called as fields but 
+have any number of rows which is called records .
+Ex .
+Emp have Emp id Emp name name dob 
+data 201456
+
+6) What is a primary key : 
+
+A primary key is a combination of fields which uniquely identifie a row .
+This is special kind of unique key , and it has implicit NOT NULL constraint . it means priary key values cannot be null .
+
+7) Unique key : 
+
+A unique key constraint uniquely identifies each record in database & provides uniqueness for the column or set of columns . A table may have more than one unique 
+keys .
+
+
+
+8) foreign keys : 
+
+A foreign key in one table which can be related to the primary key of another table .
+Relationship needs to be created between two tables by refrencing foreign key with primary key of another table .
+You can not delete foreign key because it refrence to another table as primary key .
+   
+9) Joins : This is a keyword used to query data from more tables based on the relationship between the fields of the tables .
+ keys play a major role when joins are used .
+
+10) types of join : 
+
+
+Inner join : Return when there is atleast one match of rows between the tables .
+
+right join : Right join return rows whioch are common between the tables & all 
+rows of right hand side . simply it return all rows from the right hand side table even though they are no matches in the left hand side table .
+
+Same as left join but return all rows of left tables .
+
+Full join :  return all the rows of left hand side table & all the rows of the right hand side table .
+
+11) Normalization : 
+
+normalization is the process of minimising redundancy and dependency  
+by organising  fields and tables of a database . The main aim of normalisation is to add , delete or modify field that can be 
+made in a single table .
