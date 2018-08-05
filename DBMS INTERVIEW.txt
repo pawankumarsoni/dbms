@@ -67,3 +67,185 @@ Full join :  return all the rows of left hand side table & all the rows of the r
 normalization is the process of minimising redundancy and dependency  
 by organising  fields and tables of a database . The main aim of normalisation is to add , delete or modify field that can be 
 made in a single table .
+
+12) what are all the different normalizations ? 
+
+1NF : 
+This houls remove all the duplicate columns from the table . 
+2NF : 
+Meeting all the reqirements of the first normal form . placing all the subsets in separate tables and creatins of relaytionship of tables using primary keys .
+3NF : 
+Meet all the requirement of 2nf . remivung the column which are not dependent on primary keys .
+4NF : 
+meet all the req. of 3nf . should not hav emultivalued .
+
+13) VIEW 
+
+A view is a virtual table which consists of a subset of data contained in a table .
+Views are not virtually present and it takes less space to store . view can have data of one or more tables combined and it is depending on the relationship .
+
+14) index : 
+
+faster retival technique of records from table . an index create an entry for each value and it will be faster to retrieve . 
+
+15) cursor 
+A database cursor is a control which enales traversal over the rows or records in the tables .
+this can be viewaed as a pointer to one row in a set of rows .
+cursor is very much usefull for traversing such as retrival addition removal of database records .
+
+16) relationship :
+
+defined as connection between tables in database . 1 to 1 , 1 to many , many to 1 , many to many 
+
+17) Query : 
+
+a db query is a code written in order to get the information back from the database . query can be designed in such a way that it matched with our expectations of
+the result set . simply , a question to the database .
+
+18)   trigger : 
+
+a db trigger is a code or program that automatically execute with response to some event on a table or view in a database . mainly trigger helps to maintain the 
+integrity of the database .
+ex. when a new student is added to the database , new recoords should be created in related tabled like exam score attendence tabels .
+
+ 
+19) Delete and truncate command : 
+
+delete command is used to remove rows from the table , and where clause can be 
+used for conditional set of parameters . commit and rollback can be performed after delete statement .
+truncate command remove all the rows from the table , operation can not be roll back .
+
+20) local and global variables and their difference : 
+
+local variables are variables which can be used or exist inside the function .they are not known to other function and cannot reffered to other functions . 
+whenevr we call function we can create local variable .
+whenevr we call function we can not create global  variable .
+
+21) constraint : 
+it can be specified the limit on the data type of table .
+constraint can be speciFied while creating or altering table . 
+not null 
+check
+default
+unique
+primary key
+foreign key 
+
+
+22) integrity : 
+it means accuracy and consistancy of data over its entire life cycle . 
+
+23) auto increment : 
+AUTO increment is a keyword allows user to create a unique number to be generated when a new record is inserted into the table .
+Auto incremet keyword is used in oracle while identity keyword is used in sql server .
+mostly used when primary key is used .
+
+24) difference between cluster and noncluster index: 
+
+clustered inndex is used for esy retrival of data . 
+while nonclustered index create a separate object to store date in the table . 
+point back to the original table after row serching .
+
+25) 
+
+datawarehouse : 
+large big gient set . 
+datawarehouse is a central repository of data from multiple sources of information 
+and those data are transformed and made available for the mininng and online processing . warehouse data have a subset of data called data marts .
+
+
+26) 
+
+self - join : 
+
+self-join is set to be query used to compare to itself . this is used to compare values in a column . like find maximum in a column .
+compare values in a coulmn with other values in same column in the same table .
+
+27) 
+
+cross join : define cartesian product 
+
+28) user defined functions : 
+
+function which are wirtten to use that llogic whenever required .it's not necessary to write the same logic several times . instead function can be called or executed whenevr needee .
+
+29) 
+
+collation : 
+
+set of rules . determine how character data can be stored or compared . this can be used to compare A and other language character 
+ASCII values can be used to compare those data .
+
+30) Stored procedure : 
+
+stored procedure can be used as a modular programming . means create once , store call for several times whenever required .
+this supports faster executation instead of executing multiple queries . this reduce network traffic and provide better security .
+disadvantage is that it can be executaed in database & utilise more memory . 
+
+31) OLTP(online trasaction processing )
+
+ oltp manage transaction based application which can be used for data entry and easy retrival processing of data .
+this is faster more accurate .
+
+32) CLAUSE : 
+
+sql clause is defined to limit the result set by providing condition to the query . this usually filters some rows from the whole set pof records 
+
+ex . query that has WHERE clause 
+query that have HAVING clause 
+
+33) recursive stored procedure : 
+stored procedure which calls by itself until it recheas some boundary condition .
+this recursive function or procedure helps programmer to use the same set of code any number of times .
+
+34) union , minus , intract 
+
+union : combine result of two tables and eliminate duplicate rows from the tables 
+minus : query which are not in second table but in first table will be displayed 
+intersect: common
+
+34) ALIAS : 
+ALIAS name can be given to a table or columns . this alias namecan be referred in where clause . 
+
+35)
+truncate and drop : 
+drop command remove table from the database and cannot be rolled back .
+
+36) aggregate and scalar function : 
+
+Aggregate func are usde to evalute mathematical calculation and return single values .
+this can be calculated from the columns in a table .
+scalar function return a single value based on the input values .
+
+ex . max() -> aggregate func
+     UCASE() ->scalar func
+
+37) fetch common records from two table 
+select studentid from student <strong> INTERSECT </strong> Select StudentId from exam
+
+38) fetch alternate records from a table 
+
+records can be fetched for both odd anf even row numbers : 
+to display even numbers  : 
+select studentid from (select rowno , studentid from student) where mod(rowno,2)=0
+to display odd numbers  : 
+select studentid from (select rowno , studentid from student) where mod(rowno,2)=1
+
+
+
+39) select unique records  : 
+select distinct studentid , tudentname from student 
+40)  fetch first five character of the string : 
+select substring (studentname,1,5) as studentname from student 
+select right (strudentname , 5 ) as studentname from student 
+
+41) pattern matching 
+
+LIKE operator usedfor pattern matchoing
+% matches   zero or more characters 
+_ underscore matches exactly one charcter 
+
+select * from student where studentname like 'a%'
+
+select * from student where studentname like 'ami_'
+
